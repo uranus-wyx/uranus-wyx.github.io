@@ -16,14 +16,14 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 105vh;
+    height: 120vh;
     position: relative;
 }
 .profile-pic {
-    width: 750px;
+    width: 450px;
     height: 500px;
     border-radius: 50%;
-    border: 3px solid cyan;
+    border: 3px solid rgb(249, 154, 21);
     margin-bottom: 20px;
 }
 
@@ -50,7 +50,7 @@ header {
     max-width: 800px;
     background: rgba(0, 0, 0, 0.6); 
     padding: 30px 50px 30px 50px;
-    margin-top: 50px;
+    /* margin-top: 10px; */
     border-radius: 15px; 
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); 
     text-align: center;
