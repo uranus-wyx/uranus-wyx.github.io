@@ -1,292 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuni’s Universe</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yuni’s Universe</title>
+
+  <!-- 你的全站樣式 -->
+  <link rel="stylesheet" href="./css/styles.css"/>
+
+  <!-- ScrollReveal（保留一次即可） -->
+  <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
 </head>
+
 <body>
-    <div id="particles-js"></div>
+  <!-- 粒子背景 -->
+  <div id="particles-js"></div>
 
-    <header>
-        <img src="./img/me.JPEG" alt="Your Photo" class="profile-pic">
-        <h1>Yuni Wu</h1>
-        <p><strong>🚀 Launching self-introduction program… Loading…</strong></p>
-        <p> Data Explorer | AI Model Trainer | Future Predictor | Data Scientist | AI Enthusiast</p>
-        <p> Python, SQL, R, Excel</p>
-        <p> INFJ (Strong intuition + Analytical mindset), Aquarius (Unlimited imagination)</p>
-        <p> Exploring the infinite possibilities of data, unlocking the future of AI applications</p>
-        <p><strong>Loading complete, ready for launch! 🔮</strong></p>
-        <div class="social-links">
-            <a href="https://github.com/uranus-wyx" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://linkedin.com/in/wih" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="mailto:ihwu8559@colorado.edu">
-                <i class="fas fa-envelope"></i>
-            </a>
-        </div>
-    </header>
-    
-    <section id="introduction" class="section">
-        <div class="intro-container">
-            <h2 class="matrix-title"></h2>
-            <p class="interactive-text">
-                I’m a passionate Software Engineer and Data Scientist, with a strong focus on AI, problem-solving, and software development. Currently, I’m pursuing my graduate degree in Data Science at the University of Colorado Boulder. At the same time, I’m collaborating with a Taiwan-based team to develop a project that leverages Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG) agents to reduce AI hallucinations in specific domains. This project has been a deep dive into AI applications and Natural Language Processing.
+  <!-- === 替換後的 Hero Header（含動畫與打字機） === -->
+  <header class="hero">
+    <div class="glow"></div>
+
+    <div class="card">
+      <!-- Profile image -->
+      <img src="./img/me.JPEG" alt="Portrait of Yuni Wu" class="avatar"/>
+
+      <!-- Name -->
+      <h1 class="name">Yuni Wu</h1>
+
+      <!-- Roles (typewriter) -->
+      <p class="roles">
+        <span class=>🚀</span>
+        <span id="typewriter" aria-live="polite"></span>
+        <span class="caret" aria-hidden="true"></span>
+      </p>
+
+      <!-- Tagline -->
+      <p class="tagline">Exploring data to unlock delightful, real-world AI.</p>
+
+      <!-- Skills (chips) -->
+      <ul class="skills" aria-label="Skills">
+        <li>Python</li>
+        <li>LLMs</li>
+        <li>SQL</li>
+        <li>R</li>
+        <li>Excel</li>
+      </ul>
+
+      <!-- Social links -->
+      <nav class="links" aria-label="Social links">
+        <a href="https://github.com/uranus-wyx" target="_blank" rel="noopener" class="gh" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/wih" target="_blank" rel="noopener" class="li" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:ihwu8559@colorado.edu" class="mail" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </nav>
+    </div>
+    <a href="#introduction" class="scroll-down">
+        <span></span>
+    </a>
+  </header>
+
+    <section id="introduction" class="section section-space">
+        <h2 class="sec-title">Introduction</h2>
+        <div class="intro-card">
+            <div class="intro-grid">
+            <p class="intro-line">
+                I’m a <span class="hl">Software Engineer</span> and <span class="hl">Data Scientist</span> building
+                <span class="hl">human-centered AI</span> with clear metrics and fast iteration.
             </p>
-    
-            <p class="interactive-text">
-                My journey also includes hands-on experience at Shopee, where I created automated testing solutions in Python, improving testing efficiency for websites and apps by over 30%. Earlier, I launched my own clothing website, where I managed everything from social media content to digital ads, driving a 25% increase in customer engagement within six months.
+
+            <p class="intro-line">
+                I created <span class="hl">EmotionFlow</span>: a multimodal system using LLMs + emotion recognition
+                for empathetic dialogue and real-time music recommendations.
             </p>
-    
-            <p class="interactive-text">
-                I’m actively seeking internship opportunities where I can contribute my skills in AI and software development. I’m excited to collaborate, learn, and drive meaningful change through impactful projects that challenge the status quo.
+
+            <p class="intro-line">
+                Internship: <span class="hl">nail disease detection</span> with ResNet18/MobileNetV2,
+                <span class="hl">Grad-CAM</span> interpretability, and model calibration for trustworthy predictions.
             </p>
-        </div>
-    </section>
-    
-    <section id="skills" class="section">
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <div class="skill-card" onclick="flipCard(this)">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <h3>Programming Languages</h3>
-                    </div>
-                    <div class="card-back">
-                        <p>Python, R, SQL, Go</p>
-                        <p>SAS, HTML5, CSS</p>
 
-                    </div>
-                </div>
-            </div>
-    
-            <div class="skill-card" onclick="flipCard(this)">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <h3>Machine Learning & AI</h3>
-                    </div>
-                    <div class="card-back">
-                        <p>PyTorch, TensorFlow, Hugging Face</p>
-                        <p>LangChain, LangGraph, Scikit-Learn</p>
+            <p class="intro-line">
+                At <span class="hl">Shopee</span>, automated Python testing pipelines improved evaluation efficiency by
+                <span class="hl">30%+</span>. Built data-driven content/ads, raising engagement by <span class="hl">25%</span>.
+            </p>
 
-                    </div>
-                </div>
-            </div>
-    
-            <div class="skill-card" onclick="flipCard(this)">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <h3>Data Platforms & Tools</h3>
-                    </div>
-                    <div class="card-back">
-                        <p>Tableau, GCP, Azure, Docker, Flask</p>
-                        <p>Selenium, Git, Jupyter Notebook, Excel</p>
-
-                    </div>
-                </div>
-            </div>
-    
-            <div class="skill-card" onclick="flipCard(this)">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <h3>Specializations</h3>
-                    </div>
-                    <div class="card-back">
-                        <p>Machine Learning, Predictive Analytics, Statistical Modeling</p>
-                        <p>Feature Engineering, Data Visualization</p>
-                    </div>
-                </div>
+            <p class="intro-line">
+                I’m seeking roles where I can apply <span class="hl">statistics, ML, and data mining</span> to ship
+                useful products on <span class="hl">GCP</span> and beyond.
+            </p>
             </div>
         </div>
     </section>
-    
-    <h2 class = "timeline-title">Timeline</h2>
+
+
+  <section id="skills" class="section"> 
+    <h2>Skills</h2> 
+    <div class="skills-container"> 
+        <div class="skill-card" onclick="flipCard(this)"> 
+            <div class="card-inner"> 
+                <div class="card-front"> 
+                    <h3>Programming</h3> 
+                </div> 
+                <div class="card-back"> 
+                    <p>Python, R, SQL, Go</p> 
+                    <p>HTML, CSS, JavaScript, SAS</p> 
+                </div> 
+            </div> 
+        </div> 
+        <div class="skill-card" onclick="flipCard(this)"> 
+            <div class="card-inner"> 
+                <div class="card-front"> 
+                    <h3>Machine Learning & AI</h3> 
+                </div> <div class="card-back"> 
+                    <p>PyTorch, TensorFlow, Hugging Face</p> 
+                    <p>LangChain, LangGraph, Scikit-learn</p> 
+                </div> 
+            </div> 
+        </div> 
+        <div class="skill-card" onclick="flipCard(this)"> 
+            <div class="card-inner"> 
+                <div class="card-front"> 
+                    <h3>Data Tools & Platforms</h3> 
+                </div> 
+                <div class="card-back"> 
+                    <p>GCP, Azure, Docker, Flask</p> 
+                    <p>Tableau, Excel, Git, Jupyter</p> 
+                </div> 
+            </div> 
+        </div> 
+        <div class="skill-card" onclick="flipCard(this)"> 
+            <div class="card-inner"> 
+                <div class="card-front"> 
+                    <h3>Specializations</h3> 
+                </div> 
+                <div class="card-back"> 
+                    <p>Statistical Modeling, Predictive Analytics</p> 
+                    <p>Feature Engineering, Data Visualization</p> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+    </section>
+
+
+  <h2 class="timeline-title">Timeline</h2>
     <div class="timeline">
+    <div class="line"></div>
 
-        <div class="line"></div>
-
-        <div class="event" onclick="showDetails(this)">
-            <div class="dot"></div>
-            <h3>Education</h3>
-            <p>Bachelor's in Data Science</p>
-            <p>Soochow University</p>
-            <p>2017-2021</p>
-            <div class="event-details">
-                <p>GPA: 3.7/4.0</p>
-            </div>
-        </div>
-        <div class="event" onclick="showDetails(this)">
-            <div class="dot"></div>
-            <h3>Work Experience</h3>
-            <p>Data Analyst Intern</p>
-            <p>Compal</p>
-            <p>2019-2020</p>
-            <div class="event-details">
-                <ul>
-                    <li>Conducted workforce allocation analysis for a company of 8,000+ employees using Python and Power BI,
-                        identifying inefficiencies and improve resource distribution.</li>
-                    <li>Designed an optimization model in Python and Excel that increased workforce efficiency by 80%, reducing labor
-                        costs and enhancing productivity.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="event" onclick="showDetails(this)">
-            <div class="dot"></div>
-            <h3>Work Experience</h3>
-            <p>Software Engineer</p>
-            <p>Shopee</p>
-
-            <p>2020-2021</p>
-            <div class="event-details">
-                <ul>
-                    <li>Automated testing workflows across global markets, optimizing 800+ test cases using Python and SQL, and
-                        reducing manual efforts by 80% and accelerating release cycles.</li>
-                    <li>Developed a Python tool leveraging Google Cloud Platform and API keys to automate test database access, reducing data retrieval time by 15%.</li>
-                    <li>Designed a real-time dashboard for regression testing insights, improving reporting efficiency by 85%.</li>
-                    <li>Engineered automated backend API testing in Golang, ensuring functionality integrity and reducing release errors
-                        by 95%, strengthening system stability.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="event" onclick="showDetails(this)">
-            <div class="dot"></div>
-            <h3>Projects</h3>
-            <p>Online Shop Analysis</p>
-            <p>SEP.2022-AUG.2024</p>
-            <div class="event-details">
-                <ul>
-                    <li>Designed data-driven strategies using Python and Tableau to optimize ad performance, achieving a 20%
-                        reduction in cost per click and a 40% decrease in cost per purchase over a single season.</li>
-                    <li>Conducted A/B testing to identify the optimal ad placement strategy, increasing annual sales by 20%.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="event" onclick="showDetails(this)">
-            <div class="dot"></div>
-            <h3>Projects</h3>
-            <p>NexCare - AI Powered Healthcare Agent</p>
-            <p>APR.2024-DEC.2024</p>
-            <div class="event-details">
-                <ul>
-                    <li>Developed and deployed a ReAct-based AI healthcare assistant, reducing AI hallucinations by 25% and
-                        improving response accuracy by 30%.</li>
-                    <li>Integrated Retrieval-Augmented Generation (RAG) and advanced prompt engineering, decreasing response
-                        delays in telemedicine by 30% and enhancing patient engagement.</li>
-                    <li>Trained an LLM-powered AI agent using PyTorch, applying fine-tuning and few-shot learning techniques to
-                        optimize the model, increasing LLM performance on nursing-related questions by 55%.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="event" onclick="showDetails(this)">
-            <div class="dot"></div>
-            <h3>Education</h3>
-            <p>Master's in Data Science</p>
-            <p>University of Colorado Boulder</p>
-            <p>2024-2026</p>
-            <div class="event-details">
-                <p>GPA: 3.9/4.0</p>
-            </div>
-        </div>
-        <div class="event" onclick="showDetails(this)">
-            <div class="dot"></div>
-            <h3>Projects</h3>
-            <p>Suicide Prediction - A Socioeconomic Analysis</p>
-            <p>AUG.2024-DEC.2024</p>
-            <div class="event-details">
-                <ul>
-                    <li>Boosted and refined predictive models for suicide rates, achieving 97% accuracy (from 81.6%) by optimizing
-                        KNN with GridSearchCV and incorporating socioeconomic factors like the Happiness Index and Region.</li>
-                    <li>Conducted in-depth Exploratory Data Analysis on economic factors and mental health trends, enhancing data
-                        clarity by 80% through advanced data visualization in Matplotlib.</li>
-                </ul>
-                <a href="https://github.com/uranus-wyx/SuicidePrediction">Project Report</a>
-            </div>
-        </div>
-        <div class="event" onclick="showDetails(this)">
-            <div class="dot"></div>
-            <h3>Projects</h3>
-            <p>Jordan Job Platform (Heckathon)</p>
-            <p>NOV.2024</p>
-            <div class="event-details">
-                <ul>
-                    <li>Developed a Flask-based platform connecting 500+ Jordanian youth with employment opportunities. Utilized machine
-                        learning to predict job demand, boosting user engagement by 20% and scaling the platform's impact.</li>
-                    <li>Leveraged EDA and API integration to develop customized data visualizations, increasing user registration by 10%
-                        and enhancing user satisfaction.</li>
-                </ul>
-                <a href="https://github.com/uranus-wyx/EmpoweringYouthEmployment">Project Report</a>
-            </div>
-        </div>
-        <div class="event" onclick="showDetails(this)">
-            <div class="dot"></div>
-            <h3>Projects</h3>
-            <p>Uncovering Patterns in Fitness Data</p>
-            <p>NOV.2024</p>
-            <div class="event-details">
-                <ul>
-                    <li>Optimized targeted fitness programs and improved customer segmentation strategies for fitness centers by utilizing
-                        Python and Scikit-learn to analyze fitness data, resulting in an 85% increase in program effectiveness.</li>
-                    <li>Conducted statistical analysis and predictive modeling to optimize member engagement and drive a projected 20%
-                        increase in gym memberships. Developed personalized fitness plans based on these insights.</li>
-                </ul>
-                <a href="https://github.com/uranus-wyx/UncoveringPatternsInFitnessData">Project Report</a>
-            </div>
-        </div>
-
-        <div class="event" onclick="showDetails(this)">
-            <div class="dot"></div>
-            <h3>Projects</h3>
-            <p>EmotionFlow</p>
-            <p>Real-Time Emotional Recommendation</p>
-            <p>MAY 2025</p>
-            <div class="event-details">
-                <ul>
-                    <li>Built an LLM-driven recommendation system adapting conversation, visuals, and music in real time, achieving 82% user satisfaction and 57% recommendation acceptance.</li>
-                    <li>Applied RLHF and personalization techniques, analogous to large-scale recommender systems optimizing engagement.</li>
-                    <li>Deployed the project on Google Cloud Platform (GCP), enabling full user accessibility and real-world testing.</li>
-                </ul>
-                <a href="https://emotionflow-40672525442.us-central1.run.app/">Emotion Flow</a>
-            </div>
-        </div>
-
-        <div class="event" onclick="showDetails(this)">
-            <div class="dot"></div>
-            <h3>Work Experience</h3>
-            <p>Machine Learning Engineer</p>
-            <p>MyEdMaster</p>
-
-            <p>2025</p>
-            <div class="event-details">
-                <ul>
-                    <li>Implemented and optimized a ResNet-18 (PyTorch) classifier on 50K+ medical images, achieving 93% accuracy across 22 fine-grained disease categories.</li>
-                    <li>Improved minority-class F1-score by 30% through hierarchical classification and data rebalancing techniques.</li>
-                    <li>Engineered and deployed a scalable machine learning web application (FastAPI and JavaScript) on Google Cloud Platform Cloud Run, delivering sub-second inference latency for 100+ concurrent users.</li>
-                </ul>
-            </div>
-        </div>
-        
+    <div class="event" onclick="showDetails(this)">
+        <div class="dot"></div>
+        <h3>Education</h3>
+        <p>Bachelor’s in Data Science — Soochow University</p>
+        <p>2017–2021 | GPA: 3.7/4.0</p>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Yuni Wu</p>
-    </footer>
+    <div class="event" onclick="showDetails(this)">
+        <div class="dot"></div>
+        <h3>Internship</h3>
+        <p>Data Analyst — Compal</p>
+        <p>2019–2020</p>
+        <div class="event-details">
+        <ul>
+            <li>Analyzed workforce allocation for 8,000+ employees using Python and Power BI, identifying inefficiencies.</li>
+            <li>Built optimization models in Python/Excel, improving workforce efficiency by 80% and reducing costs.</li>
+        </ul>
+        </div>
+    </div>
 
-    <!-- particles.js 相關腳本 -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
-    <script src="./js/particles.js"></script>
-    <script src="./js/app.js"></script>
+    <div class="event" onclick="showDetails(this)">
+        <div class="dot"></div>
+        <h3>Software Engineer</h3>
+        <p>Shopee</p>
+        <p>2020–2021</p>
+        <div class="event-details">
+        <ul>
+            <li>Automated 800+ test cases with Python/SQL, reducing manual work by 80% and accelerating release cycles.</li>
+            <li>Developed tools with GCP + APIs to automate test database access, cutting data retrieval time by 15%.</li>
+            <li>Built a real-time regression testing dashboard, improving reporting efficiency by 85%.</li>
+            <li>Engineered automated API testing in Go, reducing release errors by 95% and boosting system stability.</li>
+        </ul>
+        </div>
+    </div>
 
-    <script>
-        ScrollReveal().reveal('.section', { distance: '50px', duration: 1000, easing: 'ease-in-out', origin: 'bottom' });
-        ScrollReveal().reveal('.event', { distance: '50px', duration: 1000, easing: 'ease-in-out', origin: 'left', reset: true });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
-    <script src="https://kit.fontawesome.com/696b9179a6.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <div class="event" onclick="showDetails(this)">
+        <div class="dot"></div>
+        <h3>Project</h3>
+        <p>Online Shop Analysis</p>
+        <p>2022–2024</p>
+        <div class="event-details">
+        <ul>
+            <li>Used Python + Tableau to optimize ad performance, cutting cost-per-click by 20% and purchase cost by 40%.</li>
+            <li>Ran A/B testing to refine ad placement, boosting annual sales by 20%.</li>
+        </ul>
+        </div>
+    </div>
+
+    <div class="event" onclick="showDetails(this)">
+        <div class="dot"></div>
+        <h3>Project</h3>
+        <p>NexCare — AI Healthcare Agent</p>
+        <p>2024</p>
+        <div class="event-details">
+        <ul>
+            <li>Deployed a ReAct-based AI assistant, reducing hallucinations by 25% and improving accuracy by 30%.</li>
+            <li>Integrated RAG and advanced prompt engineering, cutting response delay by 30% and improving engagement.</li>
+            <li>Fine-tuned LLM with PyTorch, boosting accuracy on nursing Q&A by 55%.</li>
+        </ul>
+        </div>
+    </div>
+
+    <div class="event" onclick="showDetails(this)">
+        <div class="dot"></div>
+        <h3>Education</h3>
+        <p>Master’s in Data Science — CU Boulder</p>
+        <p>2024–2026 | GPA: 3.9/4.0</p>
+    </div>
+
+    <div class="event" onclick="showDetails(this)">
+        <div class="dot"></div>
+        <h3>Project</h3>
+        <p>Suicide Prediction — Socioeconomic Analysis</p>
+        <p>2024</p>
+        <div class="event-details">
+        <ul>
+            <li>Boosted model accuracy from 81.6% to 97% by optimizing KNN with GridSearchCV + socioeconomic features.</li>
+            <li>Enhanced visualization clarity by 80% with advanced Matplotlib plots on economic & mental health trends.</li>
+        </ul>
+        <a href="https://github.com/uranus-wyx/SuicidePrediction">Project Report</a>
+        </div>
+    </div>
+
+    <div class="event" onclick="showDetails(this)">
+        <div class="dot"></div>
+        <h3>Project</h3>
+        <p>Jordan Job Platform (Hackathon)</p>
+        <p>2024</p>
+        <div class="event-details">
+        <ul>
+            <li>Developed Flask platform linking 500+ Jordanian youth to jobs; ML-based job demand prediction increased engagement by 20%.</li>
+            <li>Built interactive dashboards with API + EDA, improving user registration by 10%.</li>
+        </ul>
+        <a href="https://github.com/uranus-wyx/EmpoweringYouthEmployment">Project Report</a>
+        </div>
+    </div>
+
+    <div class="event" onclick="showDetails(this)">
+        <div class="dot"></div>
+        <h3>Project</h3>
+        <p>Uncovering Patterns in Fitness Data</p>
+        <p>2024</p>
+        <div class="event-details">
+        <ul>
+            <li>Applied Scikit-learn to cluster fitness data, improving segmentation and program effectiveness by 85%.</li>
+            <li>Built predictive models for engagement, projecting a 20% rise in memberships via personalized plans.</li>
+        </ul>
+        <a href="https://github.com/uranus-wyx/UncoveringPatternsInFitnessData">Project Report</a>
+        </div>
+    </div>
+
+    <div class="event" onclick="showDetails(this)">
+        <div class="dot"></div>
+        <h3>Project</h3>
+        <p>EmotionFlow — Real-Time Recommendation</p>
+        <p>2025</p>
+        <div class="event-details">
+        <ul>
+            <li>Built LLM-driven recommender adapting dialogue, visuals, and music in real time, achieving 82% user satisfaction.</li>
+            <li>Applied RLHF + personalization to boost recommendation acceptance by 57%.</li>
+            <li>Deployed on GCP Cloud Run for real-world testing with full user accessibility.</li>
+        </ul>
+        <a href="https://emotionflow-40672525442.us-central1.run.app/">Emotion Flow</a>
+        </div>
+    </div>
+
+    <div class="event" onclick="showDetails(this)">
+        <div class="dot"></div>
+        <h3>Work Experience</h3>
+        <p>Machine Learning Engineer — MyEdMaster</p>
+        <p>2025</p>
+        <div class="event-details">
+        <ul>
+            <li>Implemented ResNet-18 on 50K+ nail images, achieving 93% accuracy across 22 fine-grained categories.</li>
+            <li>Raised minority-class F1 by 30% through hierarchical classification and data rebalancing.</li>
+            <li>Deployed scalable ML web app (FastAPI + JS) on GCP Cloud Run, delivering <1s latency for 100+ users.</li>
+        </ul>
+        </div>
+    </div>
+    </div>
+
+  <footer>
+    <p>&copy; 2025 Yuni Wu</p>
+  </footer>
+
+  <!-- 粒子背景腳本 -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="./js/particles.js"></script>
+  <script src="./js/app.js"></script>
+
+  <!-- ScrollReveal 初始化 -->
+  <script>
+    ScrollReveal().reveal('.section', { distance: '50px', duration: 1000, easing: 'ease-in-out', origin: 'bottom' });
+    ScrollReveal().reveal('.event', { distance: '50px', duration: 1000, easing: 'ease-in-out', origin: 'left', reset: true });
+  </script>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/696b9179a6.js" crossorigin="anonymous"></script>
+
+  <!-- jQuery（若下方未使用可移除） -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- === Hero Header Typewriter（新增） === -->
+  <script>
+    const phrases = [
+      "Data Explorer · AI Enthusiast · Problem Solver",
+      "AI Model Trainer · Statistics & ML · Data Mining",
+      "Building human-centered AI · One experiment at a time"
+    ];
+    const el = document.getElementById("typewriter");
+
+    const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+    async function typeLoop() {
+      let i = 0;
+      while (true) {
+        const text = phrases[i % phrases.length];
+        // Type
+        for (let j = 1; j <= text.length; j++) {
+          el.textContent = text.slice(0, j);
+          await sleep(28);
+        }
+        await sleep(1100);
+        // Delete
+        for (let j = text.length; j >= 0; j--) {
+          el.textContent = text.slice(0, j);
+          await sleep(14);
+        }
+        await sleep(260);
+        i++;
+      }
+    }
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!prefersReduced) typeLoop(); else {
+      document.querySelector(".caret").style.display="none";
+      el.textContent = phrases[0];
+    }
+  </script>
 </body>
 </html>
