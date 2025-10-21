@@ -29,15 +29,16 @@
   --font-xl: clamp(28px, 4vw, 36px);
   --font-xxl: clamp(36px, 6vw, 52px);
 }
+
 @media (prefers-color-scheme: light){
   :root{
-    --bg:#f6f8ff;
-    --fg:#121826;
-    --muted:#4d5b7c;
-    --accent:#3b6cff;
-    --chip:#e9edff;
-    --glass:rgba(255,255,255,0.65);
-    --ring:rgba(59,108,255,0.15);
+    --bg:#0b1220;
+    --fg:#e9eef9;
+    --muted:#b7c2d9;
+    --accent:#7aa2ff;
+    --chip:#1b2438;
+    --glass:rgba(255,255,255,0.08);
+    --ring:rgba(122,162,255,0.25);
   }
 }
 
@@ -60,7 +61,10 @@ html { scroll-behavior: smooth; }
 /* ============== Hero Header (scoped) ============== */
 .hero {
   position: relative;
-  height: 100vh;             /* full viewport */
+  top: 0; 
+  margin:0; 
+  padding:0;
+  height: 100vh;             
   display: grid;
   place-items: center;       /* center */
   padding: 0;
@@ -68,17 +72,33 @@ html { scroll-behavior: smooth; }
   background: radial-gradient(1200px 600px at 80% -10%, rgba(122,162,255,0.25), transparent 60%),
               radial-gradient(900px 500px at -10% 110%, rgba(111,255,233,0.18), transparent 60%),
               transparent; /* fixed */
+              
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 30%, rgba(122,162,255,0.08), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
 }
 .links a.resume:hover {
   color: #7aa2ff;
   text-shadow: 0 6px 18px rgba(122,162,255,0.3);
 }
-.glow{
-  position:absolute; inset:auto; width:700px; height:700px; border-radius:50%;
+.glow {
+  position: absolute;
+  top: 0; left: 0;        
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
   background: radial-gradient(closest-side, var(--ring), transparent 70%);
-  filter: blur(40px); transform: translate(-10%, -10%) rotate(8deg);
-  top:-160px; left:-120px; pointer-events:none; animation: drift 18s ease-in-out infinite both;
+  filter: blur(40px);
+  transform: translate(-20%, -20%) rotate(8deg); /* 稍微外擴，效果更自然 */
+  pointer-events: none;
+  animation: drift 18s ease-in-out infinite both;
 }
+
 @keyframes drift{
   0%,100%{ transform: translate(-10%, -10%) rotate(8deg) scale(1); }
   50%    { transform: translate(5%, -5%) rotate(0deg)  scale(1.08); }
@@ -214,23 +234,44 @@ footer p {
 .social-links a:hover{ color:cyan; transform: scale(1.2); text-shadow:0 0 10px cyan; }
 
 /* ============== Naivigation Bar ============== */
-.nav-toggle{
-position: fixed; top: 18px; left: 18px; z-index: 3;
-width: 44px; height: 44px; border-radius: 10px; border: 1px solid var(--sb-stroke);
-background: linear-gradient(180deg, rgb(200, 198, 198), rgb(171, 170, 170));
-backdrop-filter: blur(10px);
-box-shadow: 0 8px 24px rgba(0,0,0,0.28), 0 0 0 4px rgba(122,162,255,0.08);
-display: grid; place-items: center; cursor: pointer; transition: box-shadow .25s ease, transform .2s ease;
+.nav-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 34px;
+  height: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s ease;
 }
 
 .nav-toggle:hover{ transform: translateY(-1px); box-shadow: 0 12px 28px rgba(0,0,0,0.32), 0 0 0 5px rgba(122,162,255,0.12); }
 .nav-toggle:focus-visible{ outline: none; box-shadow: 0 0 0 3px var(--sb-glow); }
-.nav-toggle .bar{ display:block; width: 20px; height: 2px; background: var(--fg); border-radius: 2px; transition: transform .25s ease, opacity .2s ease; }
+.nav-toggle .bar {
+  width: 100%;
+  height: 3px;                 /* 線條厚度 */
+  background: #fff;            
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  margin: 3px 0;               /* 線條間距變小 */
+}
 .nav-toggle .bar + .bar{ margin-top: 5px; }
 /* morph into X when open */
-.nav-toggle.open .bar:nth-child(1){ transform: translateY(7px) rotate(45deg); }
-.nav-toggle.open .bar:nth-child(2){ opacity: 0; }
-.nav-toggle.open .bar:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
+.nav-toggle.open .bar:nth-child(1) {
+  transform: rotate(46deg) translateY(3.5px);
+}
+.nav-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.open .bar:nth-child(3) {
+  transform: rotate(-46deg) translateY(-3.5px);
+}
 
 /* Sidebar */
 .sidebar{
