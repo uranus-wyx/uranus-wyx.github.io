@@ -30,23 +30,6 @@
   }
 
   // -------------------------------
-  // ScrollReveal
-  // -------------------------------
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (!prefersReducedMotion && typeof ScrollReveal !== "undefined") {
-    ScrollReveal().reveal(".event", {
-      distance: "50px",
-      duration: 1000,
-      easing: "ease-in-out",
-      origin: "left",
-      opacity: 1,
-      reset: true
-    });
-  } else {
-    console.warn("[ScrollReveal] 簡化動效或未載入，略過進場動畫。");
-  }
-
-  // -------------------------------
   // Skills 翻卡（保留 inline 支援）
   // -------------------------------
   function flipCard(el) {
