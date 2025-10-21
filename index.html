@@ -5,358 +5,349 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Yuni’s Universe</title>
 
-  <!-- 你的全站樣式 -->
+  <!-- Website Icon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.png">
+  <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+  <link rel="apple-touch-icon" href="./img/favicon.png">
+  <meta name="theme-color" content="#0a0f1f">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="./css/styles.css"/>
 
-  <!-- ScrollReveal（保留一次即可） -->
-  <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
+  <!-- ScrollReveal -->
+  <script src="https://cdn.jsdelivr.net/npm/scrollreveal" defer></script>
 </head>
 
 <body>
-  <!-- 粒子背景 -->
+  <!-- Skip link for accessibility -->
+  <a class="visually-hidden" href="#introduction">Skip to content</a>
+
+  <!-- Hamburger Toggle -->
+  <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" aria-hidden="true">
+    <nav class="sidebar-nav" aria-label="Site">
+      <a href="#introduction">Introduction</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Work Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#awards">Awards</a>
+    </nav>
+  </aside>
+
+  <!-- Particles background -->
   <div id="particles-js"></div>
 
-  <!-- === 替換後的 Hero Header（含動畫與打字機） === -->
+  <!-- ===== Hero Header ===== -->
   <header class="hero">
     <div class="glow"></div>
 
     <div class="card">
-      <!-- Profile image -->
       <img src="./img/me.JPEG" alt="Portrait of Yuni Wu" class="avatar"/>
-
-      <!-- Name -->
       <h1 class="name">Yuni Wu</h1>
 
-      <!-- Roles (typewriter) -->
       <p class="roles">
-        <span class=>🚀</span>
+        <span class="emoji" aria-hidden="true">🚀</span>
         <span id="typewriter" aria-live="polite"></span>
         <span class="caret" aria-hidden="true"></span>
       </p>
 
-      <!-- Tagline -->
       <p class="tagline">Exploring data to unlock delightful, real-world AI.</p>
 
-      <!-- Skills (chips) -->
       <ul class="skills" aria-label="Skills">
         <li>Python</li>
         <li>LLMs</li>
+        <li>Google Cloud Platform</li>
         <li>SQL</li>
-        <li>R</li>
-        <li>Excel</li>
+        <li>R</li> 
       </ul>
 
-      <!-- Social links -->
       <nav class="links" aria-label="Social links">
         <a href="https://github.com/uranus-wyx" target="_blank" rel="noopener" class="gh" aria-label="GitHub">
-          <i class="fab fa-github"></i>
+          <i class="fab fa-github" aria-hidden="true"></i>
         </a>
         <a href="https://linkedin.com/in/wih" target="_blank" rel="noopener" class="li" aria-label="LinkedIn">
-          <i class="fab fa-linkedin"></i>
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
         <a href="mailto:ihwu8559@colorado.edu" class="mail" aria-label="Email">
-          <i class="fas fa-envelope"></i>
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+        </a>
+        <a href="./files/Yuni_Wu_Resume.pdf" target="_blank" rel="noopener" class="resume" aria-label="Resume">
+          <i class="fas fa-file-alt" aria-hidden="true"></i>
         </a>
       </nav>
     </div>
-    <a href="#introduction" class="scroll-down">
-        <span></span>
+
+    <a href="#introduction" class="scroll-down" aria-label="Scroll to Introduction">
+      <span></span>
     </a>
   </header>
 
-    <section id="introduction" class="section section-space">
-        <h2 class="sec-title">Introduction</h2>
-        <div class="intro-card">
-            <div class="intro-grid">
-            <p class="intro-line">
-                I’m a <span class="hl">Machine Learning Engineer</span> and <span class="hl">Data Scientist</span> passionate about 
-                building <span class="hl">intelligent, human-centered systems</span> that connect research with real-world impact.
-            </p>
+  <!-- ===== Introduction ===== -->
+  <section id="introduction" class="section section-space">
+    <h2 class="sec-title">Introduction</h2>
+    <div class="intro-card">
+      <div class="intro-grid">
+        <p class="intro-line">
+          I’m a <span class="hl">Machine Learning Engineer</span> and <span class="hl">Data Scientist</span> passionate about
+          building <span class="hl">intelligent, human-centered systems</span> that connect research with real-world impact.
+        </p>
+        <p class="intro-line">
+          I created <span class="hl">EmotionFlow</span> — a multimodal AI platform using LLMs, emotion recognition,
+          and reinforcement learning for empathetic dialogue and real-time music recommendations.
+        </p>
+        <p class="intro-line">
+          Internship: developed a <span class="hl">fine-grained nail disease classifier</span> using ResNet18 and MobileNetV2,
+          applied <span class="hl">Grad-CAM</span> interpretability, and improved minority-class F1 by <span class="hl">30%</span>.
+        </p>
+        <p class="intro-line">
+          At <span class="hl">Shopee</span>, automated large-scale data pipelines and analytics workflows,
+          improving evaluation efficiency by <span class="hl">80%</span> and driving <span class="hl">25%</span> higher engagement
+          through data-driven insights.
+        </p>
+        <p class="intro-line">
+          I’m seeking opportunities to apply <span class="hl">machine learning, data mining, and cloud deployment</span>
+          to build scalable, trustworthy AI systems — on <span class="hl">GCP</span> and beyond.
+        </p>
+      </div>
+    </div>
+  </section>
 
-            <p class="intro-line">
-                I created <span class="hl">EmotionFlow</span> — a multimodal AI platform using LLMs, emotion recognition, 
-                and reinforcement learning for empathetic dialogue and real-time music recommendations.
-            </p>
-
-            <p class="intro-line">
-                Internship: developed a <span class="hl">fine-grained nail disease classifier</span> using ResNet18 and MobileNetV2,
-                applied <span class="hl">Grad-CAM</span> interpretability, and improved minority-class F1 by <span class="hl">30%</span>.
-            </p>
-
-            <p class="intro-line">
-                At <span class="hl">Shopee</span>, automated large-scale data pipelines and analytics workflows, 
-                improving evaluation efficiency by <span class="hl">80%</span> and driving <span class="hl">25%</span> higher engagement 
-                through data-driven insights.
-            </p>
-
-            <p class="intro-line">
-                I’m seeking opportunities to apply <span class="hl">machine learning, data mining, and cloud deployment</span> 
-                to build scalable, trustworthy AI systems — on <span class="hl">GCP</span> and beyond.
-            </p>
-            </div>
+  <!-- ===== Skills ===== -->
+  <section id="skills" class="section">
+    <h3 class="skills-group">Skills</h3>
+    <div class="skills-container">
+      <div class="skill-card">
+        <div class="card-inner">
+          <div class="card-front"><h3>Programming</h3></div>
+          <div class="card-back">
+            <p>Python, R, SQL, Go</p>
+            <p>HTML, CSS, JavaScript, SAS</p>
+          </div>
         </div>
-    </section>
+      </div>
+      <div class="skill-card">
+        <div class="card-inner">
+          <div class="card-front"><h3>Machine Learning &amp; AI</h3></div>
+          <div class="card-back">
+            <p>PyTorch, TensorFlow, Hugging Face</p>
+            <p>LangChain, LangGraph, Scikit-learn</p>
+          </div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="card-inner">
+          <div class="card-front"><h3>Data Tools &amp; Platforms</h3></div>
+          <div class="card-back">
+            <p>GCP, Azure, Docker, Flask</p>
+            <p>Tableau, Excel, Git, Jupyter</p>
+          </div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="card-inner">
+          <div class="card-front"><h3>Specializations</h3></div>
+          <div class="card-back">
+            <p>Statistical Modeling, Predictive Analytics</p>
+            <p>Feature Engineering, Data Visualization</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ===== Timeline ===== -->
+  <div class="timeline">
+    <h3 class="timeline-group" id="work">Work Experience</h3>
 
-
-  <section id="skills" class="section"> 
-    <h2>Skills</h2> 
-    <div class="skills-container"> 
-        <div class="skill-card" onclick="flipCard(this)"> 
-            <div class="card-inner"> 
-                <div class="card-front"> 
-                    <h3>Programming</h3> 
-                </div> 
-                <div class="card-back"> 
-                    <p>Python, R, SQL, Go</p> 
-                    <p>HTML, CSS, JavaScript, SAS</p> 
-                </div> 
-            </div> 
-        </div> 
-        <div class="skill-card" onclick="flipCard(this)"> 
-            <div class="card-inner"> 
-                <div class="card-front"> 
-                    <h3>Machine Learning & AI</h3> 
-                </div> <div class="card-back"> 
-                    <p>PyTorch, TensorFlow, Hugging Face</p> 
-                    <p>LangChain, LangGraph, Scikit-learn</p> 
-                </div> 
-            </div> 
-        </div> 
-        <div class="skill-card" onclick="flipCard(this)"> 
-            <div class="card-inner"> 
-                <div class="card-front"> 
-                    <h3>Data Tools & Platforms</h3> 
-                </div> 
-                <div class="card-back"> 
-                    <p>GCP, Azure, Docker, Flask</p> 
-                    <p>Tableau, Excel, Git, Jupyter</p> 
-                </div> 
-            </div> 
-        </div> 
-        <div class="skill-card" onclick="flipCard(this)"> 
-            <div class="card-inner"> 
-                <div class="card-front"> 
-                    <h3>Specializations</h3> 
-                </div> 
-                <div class="card-back"> 
-                    <p>Statistical Modeling, Predictive Analytics</p> 
-                    <p>Feature Engineering, Data Visualization</p> 
-                </div> 
-            </div> 
-        </div> 
-    </div> 
-    </section>
-
-
-  <h2 class="timeline-title">Timeline</h2>
-    <div class="timeline">
-    <div class="line"></div>
-
-    <div class="event" onclick="showDetails(this)">
-        <div class="dot"></div>
-        <h3>Education</h3>
-        <p>Bachelor’s in Data Science — Soochow University</p>
-        <p>2017–2021 | GPA: 3.7/4.0</p>
+    <div class="event">
+      <div class="dot"></div>
+      <p><strong>Machine Learning Engineer Intern</strong></p>
+      <p>MyEdMaster</p>
+      <p>2025</p>
+      <div class="event-details">
+        <ul>
+          <li>Implemented ResNet-18 on 50K+ nail images, achieving 93% accuracy across 22 fine-grained categories.</li>
+          <li>Raised minority-class F1 by 30% via hierarchical classification and data rebalancing.</li>
+          <li>Deployed FastAPI + JS on GCP Cloud Run, delivering &lt;1s latency for 100+ users.</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="event" onclick="showDetails(this)">
-        <div class="dot"></div>
-        <h3>Work Experience</h3>
-        <p>Data Analyst — Compal</p>
-        <p>2019–2020</p>
-        <div class="event-details">
+    <div class="event">
+      <div class="dot"></div>
+      <p><strong>Research AI Engineer Intern</strong></p>
+      <p>Kashmir World Foundation</p>
+      <p>2025</p>
+      <div class="event-details">
+        <ul>
+          <li>Analyzed 108K+ bird clips with <span class="hl">VQ-VAE tokenization</span> to study species and environment context.</li>
+          <li>Built <span class="hl">UMAP</span> visualizations and clustering to interpret token embeddings and human-activity links.</li>
+          <li>Developed representation-learning and cross-analysis workflows with ecological metadata.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="dot"></div>
+      <p><strong>Course Facilitator</strong></p>
+      <p>University of Colorado Boulder</p>
+      <p>2024 – Present</p>
+      <div class="event-details">
+        <ul>
+          <li>Supported grad courses in <span class="hl">Statistics</span>, <span class="hl">ML</span>, and <span class="hl">Big Data Systems</span> for 100+ students.</li>
+          <li>Managed Salesforce case tracking; resolved GCP, Hadoop, Spark, and Python environment issues.</li>
+          <li>Created tutorials and debugging guides, improving lab completion and satisfaction.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="dot"></div>
+      <p><strong>Software Engineer</strong></p>
+      <p>Shopee</p>
+      <p>2020–2021</p>
+      <div class="event-details">
+        <ul>
+          <li>Automated 800+ Python/SQL test cases, reducing manual work by 80% and accelerating releases.</li>
+          <li>Built GCP + API tools for test DB access, cutting data retrieval time by 15%.</li>
+          <li>Delivered real-time regression dashboards, improving reporting efficiency by 85%.</li>
+          <li>Engineered Go-based API testing, reducing release errors by 95%.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="event">
+      <div class="dot"></div>
+      <p><strong>Data Analyst Intern</strong></p>
+      <p>Compal</p>
+      <p>2019–2020</p>
+      <div class="event-details">
         <ul>
             <li>Analyzed workforce allocation for 8,000+ employees using Python and Power BI, identifying inefficiencies.</li>
             <li>Built optimization models in Python/Excel, improving workforce efficiency by 80% and reducing costs.</li>
         </ul>
-        </div>
+      </div>
     </div>
 
-    <div class="event" onclick="showDetails(this)">
-        <div class="dot"></div>
-        <h3>Work Experience</h3>
-        <p>Software Engineer - Shopee</p>
-        <p>2020–2021</p>
-        <div class="event-details">
+    <h3 class="timeline-group" id="projects">Projects</h3>
+
+    <div class="event">
+      <div class="dot"></div>
+      <p><strong>EmotionFlow — Real-Time Recommendation</strong></p>
+      <p>2025</p>
+      <div class="event-details">
         <ul>
-            <li>Automated 800+ test cases with Python/SQL, reducing manual work by 80% and accelerating release cycles.</li>
-            <li>Developed tools with GCP + APIs to automate test database access, cutting data retrieval time by 15%.</li>
-            <li>Built a real-time regression testing dashboard, improving reporting efficiency by 85%.</li>
-            <li>Engineered automated API testing in Go, reducing release errors by 95% and boosting system stability.</li>
+          <li>LLM-driven recommender adapting dialogue/visuals/music; 82% user satisfaction.</li>
+          <li>Applied RLHF + personalization, boosting acceptance rate by 57%.</li>
+          <li>Deployed on GCP Cloud Run for real-world testing.</li>
         </ul>
-        </div>
+        <a href="https://emotionflow-40672525442.us-central1.run.app/" target="_blank" rel="noopener">EmotionFlow</a>
+      </div>
     </div>
 
-    <div class="event" onclick="showDetails(this)">
-        <div class="dot"></div>
-        <h3>Project</h3>
-        <p>Online Shop Analysis</p>
-        <p>2022–2024</p>
-        <div class="event-details">
+    <div class="event">
+      <div class="dot"></div>
+      <p><strong>NexCare — AI Healthcare Agent</strong></p>
+      <p>2024</p>
+      <div class="event-details">
         <ul>
-            <li>Used Python + Tableau to optimize ad performance, cutting cost-per-click by 20% and purchase cost by 40%.</li>
-            <li>Ran A/B testing to refine ad placement, boosting annual sales by 20%.</li>
+          <li>Deployed ReAct-based assistant; reduced hallucinations by 25%, improved accuracy by 30%.</li>
+          <li>Integrated RAG + prompt engineering; cut latency by 30% and improved engagement.</li>
+          <li>Fine-tuned LLM (PyTorch) for nursing Q&amp;A, +55% accuracy.</li>
         </ul>
-        </div>
+      </div>
     </div>
 
-    <div class="event" onclick="showDetails(this)">
-        <div class="dot"></div>
-        <h3>Project</h3>
-        <p>NexCare — AI Healthcare Agent</p>
-        <p>2024</p>
-        <div class="event-details">
+    <div class="event">
+      <div class="dot"></div>
+      <p><strong>Suicide Prediction — Socioeconomic Analysis</strong></p>
+      <p>2024</p>
+      <div class="event-details">
         <ul>
-            <li>Deployed a ReAct-based AI assistant, reducing hallucinations by 25% and improving accuracy by 30%.</li>
-            <li>Integrated RAG and advanced prompt engineering, cutting response delay by 30% and improving engagement.</li>
-            <li>Fine-tuned LLM with PyTorch, boosting accuracy on nursing Q&A by 55%.</li>
+          <li>Lifted accuracy from 81.6% → 97% via KNN + GridSearchCV + socioeconomic features.</li>
+          <li>Improved viz clarity by 80% with advanced Matplotlib on economic &amp; mental-health trends.</li>
         </ul>
-        </div>
+        <a href="https://github.com/uranus-wyx/SuicidePrediction" target="_blank" rel="noopener">Project Report</a>
+      </div>
     </div>
 
-    <div class="event" onclick="showDetails(this)">
-        <div class="dot"></div>
-        <h3>Education</h3>
-        <p>Master’s in Data Science — CU Boulder</p>
-        <p>2024–2026 | GPA: 3.86/4.0</p>
-    </div>
-
-    <div class="event" onclick="showDetails(this)">
-        <div class="dot"></div>
-        <h3>Project</h3>
-        <p>Suicide Prediction — Socioeconomic Analysis</p>
-        <p>2024</p>
-        <div class="event-details">
+    <div class="event">
+      <div class="dot"></div>
+      <p><strong>Uncovering Patterns in Fitness Data</strong></p>
+      <p>2024</p>
+      <div class="event-details">
         <ul>
-            <li>Boosted model accuracy from 81.6% to 97% by optimizing KNN with GridSearchCV + socioeconomic features.</li>
-            <li>Enhanced visualization clarity by 80% with advanced Matplotlib plots on economic & mental health trends.</li>
+          <li>Clustered fitness data (scikit-learn) to improve program segmentation by 85%.</li>
+          <li>Built engagement predictors; projected +20% memberships via personalization.</li>
         </ul>
-        <a href="https://github.com/uranus-wyx/SuicidePrediction">Project Report</a>
-        </div>
+        <a href="https://github.com/uranus-wyx/UncoveringPatternsInFitnessData" target="_blank" rel="noopener">Project Report</a>
+      </div>
     </div>
 
-    <div class="event" onclick="showDetails(this)">
-        <div class="dot"></div>
-        <h3>Project</h3>
-        <p>Jordan Job Platform (Hackathon)</p>
-        <p>2024</p>
-        <div class="event-details">
+    <div class="event">
+      <div class="dot"></div>
+      <p><strong>Online Shop Analysis</strong></p>
+      <p>2022–2024</p>
+      <div class="event-details">
         <ul>
-            <li>Developed Flask platform linking 500+ Jordanian youth to jobs; ML-based job demand prediction increased engagement by 20%.</li>
-            <li>Built interactive dashboards with API + EDA, improving user registration by 10%.</li>
+          <li>Optimized ads (Python + Tableau): −20% CPC, −40% cost per purchase.</li>
+          <li>A/B tests refined placements; +20% annual sales.</li>
         </ul>
-        <a href="https://github.com/uranus-wyx/EmpoweringYouthEmployment">Project Report</a>
-        </div>
+      </div>
     </div>
 
-    <div class="event" onclick="showDetails(this)">
-        <div class="dot"></div>
-        <h3>Project</h3>
-        <p>Uncovering Patterns in Fitness Data</p>
-        <p>2024</p>
-        <div class="event-details">
+    <h3 class="timeline-group" id="leadership">Leadership</h3>
+
+    <div class="event">
+      <div class="dot"></div>
+      <p><strong>President</strong></p>
+      <p>Taiwanese Student Association (TSA) at CU Boulder</p>
+      <p>2024 – Present</p>
+      <div class="event-details">
         <ul>
-            <li>Applied Scikit-learn to cluster fitness data, improving segmentation and program effectiveness by 85%.</li>
-            <li>Built predictive models for engagement, projecting a 20% rise in memberships via personalized plans.</li>
+          <li>Lead a <span class="hl">15-member board</span> serving 200+ students; organized cultural &amp; social programs.</li>
+          <li>Managed funding, logistics, and university coordination (CSI, SOAC); secured travel/activity grants.</li>
+          <li>Executed <span class="hl">Mid-Autumn BBQ, Ski Trip, Welcome Night</span> to strengthen community ties.</li>
+          <li>Redesigned bylaws, budgeting, and promo materials to improve continuity and transparency.</li>
         </ul>
-        <a href="https://github.com/uranus-wyx/UncoveringPatternsInFitnessData">Project Report</a>
-        </div>
+      </div>
     </div>
 
-    <div class="event" onclick="showDetails(this)">
-        <div class="dot"></div>
-        <h3>Project</h3>
-        <p>EmotionFlow — Real-Time Recommendation</p>
-        <p>2025</p>
-        <div class="event-details">
+    <h3 class="timeline-group" id="awards">Awards</h3>
+
+    <div class="event">
+      <div class="dot"></div>
+      <p><strong>Jordan Job Platform (Hackathon)</strong></p>
+      <p>2024</p>
+      <div class="event-details">
         <ul>
-            <li>Built LLM-driven recommender adapting dialogue, visuals, and music in real time, achieving 82% user satisfaction.</li>
-            <li>Applied RLHF + personalization to boost recommendation acceptance by 57%.</li>
-            <li>Deployed on GCP Cloud Run for real-world testing with full user accessibility.</li>
+          <li>Flask platform connecting 500+ youth to jobs; ML demand prediction drove +20% engagement.</li>
+          <li>Interactive dashboards (API + EDA) increased registration by 10%.</li>
         </ul>
-        <a href="https://emotionflow-40672525442.us-central1.run.app/">Emotion Flow</a>
-        </div>
+        <a href="https://github.com/uranus-wyx/EmpoweringYouthEmployment" target="_blank" rel="noopener">Project Report</a>
+      </div>
     </div>
-
-    <div class="event" onclick="showDetails(this)">
-        <div class="dot"></div>
-        <h3>Work Experience</h3>
-        <p>Machine Learning Engineer — MyEdMaster</p>
-        <p>2025</p>
-        <div class="event-details">
-        <ul>
-            <li>Implemented ResNet-18 on 50K+ nail images, achieving 93% accuracy across 22 fine-grained categories.</li>
-            <li>Raised minority-class F1 by 30% through hierarchical classification and data rebalancing.</li>
-            <li>Deployed scalable ML web app (FastAPI + JS) on GCP Cloud Run, delivering <1s latency for 100+ users.</li>
-        </ul>
-        </div>
-    </div>
-
-    <div class="event" onclick="showDetails(this)">
-        <div class="dot"></div>
-        <h3>Work Experience</h3>
-        <p>Research AI Intern — Kashmir World Foundation</p>
-        <p>2025</p>
-        <div class="event-details">
-            <ul>
-            <li>Analyzed 108K+ bird audio clips using <span class="hl">VQ-VAE tokenization</span> to study species behavior and environmental context.</li>
-            <li>Built <span class="hl">UMAP visualizations</span> and clustering pipelines to interpret token embeddings and link them to species and human activity.</li>
-            <li>Developed representation-learning workflows and cross-analysis scripts integrating <span class="hl">bioacoustics data</span> with ecological metadata.</li>
-            </ul>
-        </div>
-    </div>
-    <div class="event" onclick="showDetails(this)">
-    <div class="dot"></div>
-        <h3>Work Experience</h3>
-        <p>Course Facilitator — University of Colorado Boulder</p>
-        <p>2024 – Present</p>
-        <div class="event-details">
-            <ul>
-            <li>Supported graduate-level courses in <span class="hl">Statistics</span>, <span class="hl">Machine Learning</span> and <span class="hl">Big Data Systems</span>, guiding 100+ students through technical labs and assignments.</li>
-            <li>Managed <span class="hl">Salesforce case tracking</span> and resolved student issues related to GCP setup, Hadoop, Spark, and Python environments.</li>
-            <li>Created detailed <span class="hl">tutorial documentation</span> and debugging guides, improving lab completion rates and student satisfaction.</li>
-            </ul>
-        </div>
-    </div>
-    <div class="event" onclick="showDetails(this)">
-        <div class="dot"></div>
-        <h3>Leadership</h3>
-        <p>President — Taiwanese Student Association (TSA), CU Boulder</p>
-        <p>2024 – Present</p>
-        <div class="event-details">
-            <ul>
-            <li>Lead a <span class="hl">25-member board</span> to organize cultural and social events for 30+ Taiwanese and international students at CU Boulder.</li>
-            <li>Managed <span class="hl">event funding, logistics, and university coordination</span> with CSI and SOAC, securing travel and activity grants for community events.</li>
-            <li>Planned and executed large-scale gatherings such as <span class="hl">Mid-Autumn BBQ, Ski Trip, and Welcome Night</span> to foster cultural exchange and student connection.</li>
-            <li>Redesigned <span class="hl">bylaws, budgeting systems, and promotional materials</span> to improve transparency and organization continuity.</li>
-            </ul>
-        </div>
-    </div>
-    </div>
+  </div>
 
   <footer>
     <p>&copy; 2025 Yuni Wu</p>
   </footer>
 
-  <!-- 粒子背景腳本 -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script src="./js/particles.js"></script>
-  <script src="./js/app.js"></script>
-
-  <!-- ScrollReveal 初始化 -->
-  <script>
-    ScrollReveal().reveal('.section', { distance: '50px', duration: 1000, easing: 'ease-in-out', origin: 'bottom' });
-    ScrollReveal().reveal('.event', { distance: '50px', duration: 1000, easing: 'ease-in-out', origin: 'left', reset: true });
-  </script>
+  <!-- Scripts: particles + app -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+  <script src="./js/particles.js" defer></script>
+  <script src="./js/app.js" defer></script>
 
   <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/696b9179a6.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/696b9179a6.js" crossorigin="anonymous" defer></script>
 
-  <!-- jQuery（若下方未使用可移除） -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-  <!-- === Hero Header Typewriter（新增） === -->
+  <!-- Typewriter (kept inline for simplicity) -->
   <script>
     const phrases = [
       "Data Explorer · AI Enthusiast · Problem Solver",
@@ -364,32 +355,20 @@
       "Building human-centered AI · One experiment at a time"
     ];
     const el = document.getElementById("typewriter");
-
     const sleep = (ms) => new Promise(r => setTimeout(r, ms));
     async function typeLoop() {
       let i = 0;
       while (true) {
         const text = phrases[i % phrases.length];
-        // Type
-        for (let j = 1; j <= text.length; j++) {
-          el.textContent = text.slice(0, j);
-          await sleep(28);
-        }
+        for (let j = 1; j <= text.length; j++) { el.textContent = text.slice(0, j); await sleep(28); }
         await sleep(1100);
-        // Delete
-        for (let j = text.length; j >= 0; j--) {
-          el.textContent = text.slice(0, j);
-          await sleep(14);
-        }
+        for (let j = text.length; j >= 0; j--) { el.textContent = text.slice(0, j); await sleep(14); }
         await sleep(260);
         i++;
       }
     }
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (!prefersReduced) typeLoop(); else {
-      document.querySelector(".caret").style.display="none";
-      el.textContent = phrases[0];
-    }
+    if (!prefersReduced) typeLoop(); else { document.querySelector(".caret").style.display="none"; el.textContent = phrases[0]; }
   </script>
 </body>
 </html>
